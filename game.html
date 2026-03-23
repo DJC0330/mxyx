@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>命悬一线 - 桌游小程序</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="container">
+        <h1>命悬一线</h1>
+        
+        <div class="game-section">
+            <div class="question-section">
+                <h2>随机问题</h2>
+                <div id="questionDisplay" class="question-display">点击按钮生成问题</div>
+                <button id="generateQuestion">生成问题</button>
+            </div>
+            
+            <div class="number-section">
+                <h2>1-100不重复抽数字</h2>
+                <div class="number-controls">
+                    <button id="drawNumber">抽取数字</button>
+                    <button id="resetNumbers">重置数字</button>
+                </div>
+                <div id="currentNumber" class="current-number">当前数字：-</div>
+                <div id="remainingNumbers" class="remaining-numbers">剩余数字：100个</div>
+                <div id="drawnNumbers" class="drawn-numbers">
+                    <h3>已抽取的数字：</h3>
+                    <div id="drawnList" class="drawn-list"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-rules">
+            <h2>游戏规则</h2>
+            <ul>
+                <li>点击"生成问题"获取随机问题（每个问题都有1-100的程度范围）</li>
+                <li>点击"抽取数字"从1-100中随机抽取不重复的数字</li>
+                <li>抽取的数字代表问题的程度（数字越大程度越深）</li>
+                <li>每个数字只能被抽取一次</li>
+                <li>点击"重置数字"可以重新开始</li>
+            </ul>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
